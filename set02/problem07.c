@@ -39,9 +39,13 @@ void find_areas(int n,tri t[n])
 }
 tri find_smallest(int n,tri t[n])
 {
-  tri smallest={100,100,100};
+  tri smallest;
+  smallest.area=t[0].area;
+  smallest.height=t[0].height;
+  smallest.base=t[0].base;
+  
   int i;
-  for (i=0;i<n;i++)
+  for (i=1;i<n;i++)
     {
       if(t[i].area < smallest.area)
       {
